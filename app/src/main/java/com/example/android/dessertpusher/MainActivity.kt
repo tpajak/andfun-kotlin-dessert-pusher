@@ -157,8 +157,28 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         Timber.i("onStart Called")
     }
 
+    override fun onResume() {
+        super.onResume()
+        Timber.i("onResume Called")
+    }
 
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause Called")
+    }
 
-    // TODO (05) Here, override the rest of the lifecycle methods and use Timber to print
-    // log statements. Don't forget to update the log statement in onCreate!
+    override fun onStop() {
+        super.onStop()
+        Timber.i("onStop Called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy Called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart Called")
+    }
 }
